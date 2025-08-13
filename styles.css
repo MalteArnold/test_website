@@ -202,7 +202,13 @@ a.link:hover { border-color: var(--accent); }
   margin-bottom: var(--space-3);
 }
 .hero__text { color: var(--muted); max-width: 60ch; }
-.hero__cta { display: flex; gap: var(--space-3); margin-top: var(--space-4); flex-wrap: wrap; }
+.hero__cta {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4); /* NEU: Abstand zu Social Icons */
+}
 
 .hero__media { display: grid; place-items: center; }
 .avatar {
