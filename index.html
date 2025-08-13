@@ -1,439 +1,715 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}} | Portfolio</title>
-  <meta name="description" content="{{2–3 Sätze, locker und sympathisch}}">
+    <title>
+      {{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}} | Portfolio
+    </title>
+    <meta name="description" content="{{2–3 Sätze, locker und sympathisch}}" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}" />
-  <meta property="og:description" content="{{2–3 Sätze, locker und sympathisch}}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com" />
-  <meta property="og:image" content="https://picsum.photos/seed/ogimage/1200/630" />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="{{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}"
+    />
+    <meta
+      property="og:description"
+      content="{{2–3 Sätze, locker und sympathisch}}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <meta
+      property="og:image"
+      content="https://picsum.photos/seed/ogimage/1200/630"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}" />
-  <meta name="twitter:description" content="{{2–3 Sätze, locker und sympathisch}}" />
-  <meta name="twitter:image" content="https://picsum.photos/seed/twitterimg/1200/630" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="{{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}"
+    />
+    <meta
+      name="twitter:description"
+      content="{{2–3 Sätze, locker und sympathisch}}"
+    />
+    <meta
+      name="twitter:image"
+      content="https://picsum.photos/seed/twitterimg/1200/630"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- Structured Data (Person) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "{{Dein Name}}",
-    "jobTitle": "{{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}",
-    "description": "{{2–3 Sätze, locker und sympathisch}}",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "{{Stadt/Land}}"
-    },
-    "email": "mailto:{{deine_email}}",
-    "url": "https://example.com",
-    "sameAs": [
-      "{{GitHub_URL}}",
-      "{{LinkedIn_URL}}",
-      "{{Instagram_URL}}"
-    ]
-  }
-  </script>
-</head>
+    <!-- Structured Data (Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{Dein Name}}",
+        "jobTitle": "{{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}",
+        "description": "{{2–3 Sätze, locker und sympathisch}}",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{Stadt/Land}}"
+        },
+        "email": "mailto:{{deine_email}}",
+        "url": "https://example.com",
+        "sameAs": ["{{GitHub_URL}}", "{{LinkedIn_URL}}", "{{Instagram_URL}}"]
+      }
+    </script>
+  </head>
 
-<body id="home">
-  <!-- Skip-Link -->
-  <a class="sr-only sr-only--focusable" href="#main">Zum Inhalt springen</a>
+  <body id="home">
+    <!-- Skip-Link -->
+    <a class="sr-only sr-only--focusable" href="#main">Zum Inhalt springen</a>
 
-  <!-- Header / Navigation -->
-  <header class="site-header" role="banner">
-    <div class="container nav">
-      <a href="#home" class="logo" aria-label="Startseite">
-        <span class="logo__mark">◆</span> {{Dein Name}}
-      </a>
+    <!-- Header / Navigation -->
+    <header class="site-header" role="banner">
+      <div class="container nav">
+        <a href="#home" class="logo" aria-label="Startseite">
+          <span class="logo__mark">◆</span> {{Dein Name}}
+        </a>
 
-      <nav class="nav__menu" aria-label="Hauptnavigation">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list">
-          <span class="sr-only">Menü öffnen</span>
-          <!-- Burger Icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-        <ul id="nav-list" class="nav__list">
-          <li><a href="#home" class="nav__link is-active">Home</a></li>
-          <li><a href="#about" class="nav__link">Über mich</a></li>
-          <li><a href="#skills" class="nav__link">Skills</a></li>
-          <li><a href="#projects" class="nav__link">Projekte</a></li>
-          <li><a href="#experience" class="nav__link">Erfahrung</a></li>
-          <li><a href="#contact" class="nav__link">Kontakt</a></li>
-          <li>
-            <button id="theme-toggle" class="btn btn--ghost" type="button" aria-label="Dark‑Mode umschalten">
-              <span aria-hidden="true">🌙</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- Hero -->
-    <section id="home" class="section hero" aria-label="Hero Bereich">
-      <div class="hero__decor" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <h1 class="hero__title">Hi, ich bin {{Dein Name}}.</h1>
-          <p class="hero__subtitle">{{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}</p>
-          <p class="hero__text">{{2–3 Sätze, locker und sympathisch}}</p>
-
-          <div class="hero__cta">
-            <a href="#contact" class="btn btn--primary">Kontakt</a>
-            <a href="#projects" class="btn btn--accent">Projekte ansehen</a>
-          </div>
-
-          <ul class="socials" aria-label="Soziale Profile">
-            <li><a href="{{GitHub_URL}}" class="socials__link" target="_blank" rel="noopener" aria-label="GitHub">
-              <!-- GitHub Icon -->
-              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.41-4.04-1.41-.55-1.41-1.34-1.79-1.34-1.79-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.48 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22.96-.27 1.98-.4 3-.41 1.02 0 2.04.14 3 .41 2.29-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.24 1.89 1.24 3.19 0 4.58-2.81 5.59-5.49 5.89.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
-            </a></li>
-            <li><a href="{{LinkedIn_URL}}" class="socials__link" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <!-- LinkedIn Icon -->
-              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.64h.06c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.33c0-1.27-.02-2.9-1.77-2.9-1.78 0-2.05 1.38-2.05 2.8V21H9z"/></svg>
-            </a></li>
-            <li><a href="{{Instagram_URL}}" class="socials__link" target="_blank" rel="noopener" aria-label="Instagram">
-              <!-- Instagram Icon -->
-              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m-5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2.2A2.8 2.8 0 1 0 12 16.8 2.8 2.8 0 0 0 12 9.2M18 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
-            </a></li>
+        <nav class="nav__menu" aria-label="Hauptnavigation">
+          <button
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-list"
+          >
+            <span class="sr-only">Menü öffnen</span>
+            <!-- Burger Icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 6h18M3 12h18M3 18h18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <ul id="nav-list" class="nav__list">
+            <li><a href="#home" class="nav__link is-active">Home</a></li>
+            <li><a href="#about" class="nav__link">Über mich</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#projects" class="nav__link">Projekte</a></li>
+            <li><a href="#experience" class="nav__link">Erfahrung</a></li>
+            <li><a href="#contact" class="nav__link">Kontakt</a></li>
+            <li>
+              <button
+                id="theme-toggle"
+                class="btn btn--ghost"
+                type="button"
+                aria-label="Dark‑Mode umschalten"
+              >
+                <span aria-hidden="true">🌙</span>
+              </button>
+            </li>
           </ul>
-        </div>
-
-        <div class="hero__media">
-          <img
-            src="https://picsum.photos/seed/portrait/560/560"
-            srcset="https://picsum.photos/seed/portrait/360/360 360w, https://picsum.photos/seed/portrait/560/560 560w, https://picsum.photos/seed/portrait/720/720 720w"
-            sizes="(max-width: 600px) 240px, (max-width: 992px) 360px, 420px"
-            alt="Portrait von {{Dein Name}}"
-            class="avatar"
-          />
-        </div>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Über mich -->
-    <section id="about" class="section about" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title" class="section__title">Über mich</h2>
-        <p class="about__lead">
-          Ich bin {{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}} aus {{Stadt/Land}}.
-          {{2–3 Sätze, locker und sympathisch}} Meine Arbeit dreht sich um {{Rolle/Was du machst}}.
-          Wichtig sind mir {{Werte/Interessen}}.
-        </p>
-      </div>
-    </section>
+    <main id="main">
+      <!-- Hero -->
+      <section id="home" class="section hero" aria-label="Hero Bereich">
+        <div class="hero__decor" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <h1 class="hero__title">Hi, ich bin {{Dein Name}}.</h1>
+            <p class="hero__subtitle">
+              {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}
+            </p>
+            <p class="hero__text">{{2–3 Sätze, locker und sympathisch}}</p>
 
-    <!-- Skills -->
-    <section id="skills" class="section skills" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title" class="section__title">Skills</h2>
-        <ul class="skills__tags" role="list">
-          <!-- 6–12 Badges -->
-          <li class="tag">Python</li>
-          <li class="tag">SQL</li>
-          <li class="tag">HTML/CSS</li>
-          <li class="tag">JavaScript</li>
-          <li class="tag">Figma</li>
-          <li class="tag">Marketing Automation</li>
-          <li class="tag">Git</li>
-          <li class="tag">Data Viz</li>
-          <li class="tag">Cloud Basics</li>
-          <li class="tag">NoSQL</li>
-          <li class="tag">Scrum</li>
-          <li class="tag">CI/CD</li>
+            <div class="hero__cta">
+              <a href="#contact" class="btn btn--primary">Kontakt</a>
+              <a href="#projects" class="btn btn--accent">Projekte ansehen</a>
+            </div>
+
+            <ul class="socials" aria-label="Soziale Profile">
+              <li>
+                <a
+                  href="{{GitHub_URL}}"
+                  class="socials__link"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub"
+                >
+                  <!-- GitHub Icon -->
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.41-4.04-1.41-.55-1.41-1.34-1.79-1.34-1.79-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.48 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22.96-.27 1.98-.4 3-.41 1.02 0 2.04.14 3 .41 2.29-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.24 1.89 1.24 3.19 0 4.58-2.81 5.59-5.49 5.89.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="{{LinkedIn_URL}}"
+                  class="socials__link"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <!-- LinkedIn Icon -->
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.64h.06c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.33c0-1.27-.02-2.9-1.77-2.9-1.78 0-2.05 1.38-2.05 2.8V21H9z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="{{Instagram_URL}}"
+                  class="socials__link"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <!-- Instagram Icon -->
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m-5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2.2A2.8 2.8 0 1 0 12 16.8 2.8 2.8 0 0 0 12 9.2M18 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__media">
+            <img
+              src="https://picsum.photos/seed/portrait/560/560"
+              srcset="
+                https://picsum.photos/seed/portrait/360/360 360w,
+                https://picsum.photos/seed/portrait/560/560 560w,
+                https://picsum.photos/seed/portrait/720/720 720w
+              "
+              sizes="(max-width: 600px) 240px, (max-width: 992px) 360px, 420px"
+              alt="Portrait von {{Dein Name}}"
+              class="avatar"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Über mich -->
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title" class="section__title">Über mich</h2>
+          <p class="about__lead">
+            Ich bin {{Dein Name}} – {{z.B. “Data‑Enthusiast & Tech‑Allrounder”}}
+            aus {{Stadt/Land}}. {{2–3 Sätze, locker und sympathisch}} Meine
+            Arbeit dreht sich um {{Rolle/Was du machst}}. Wichtig sind mir
+            {{Werte/Interessen}}.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="section skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <h2 id="skills-title" class="section__title">Skills</h2>
+          <ul class="skills__tags" role="list">
+            <!-- 6–12 Badges -->
+            <li class="tag">Python</li>
+            <li class="tag">SQL</li>
+            <li class="tag">HTML/CSS</li>
+            <li class="tag">JavaScript</li>
+            <li class="tag">Figma</li>
+            <li class="tag">Marketing Automation</li>
+            <li class="tag">Git</li>
+            <li class="tag">Data Viz</li>
+            <li class="tag">Cloud Basics</li>
+            <li class="tag">NoSQL</li>
+            <li class="tag">Scrum</li>
+            <li class="tag">CI/CD</li>
+          </ul>
+
+          <!-- Fortschritt/Level -->
+          <div class="grid skills__grid">
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">Python</span>
+                <span class="skill__level" aria-hidden="true">Pro</span>
+              </div>
+              <progress
+                class="skill__bar"
+                value="85"
+                max="100"
+                aria-label="Skill-Level Python 85%"
+              ></progress>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">SQL</span>
+                <span class="skill__level" aria-hidden="true"
+                  >Fortgeschritten</span
+                >
+              </div>
+              <progress
+                class="skill__bar"
+                value="75"
+                max="100"
+                aria-label="Skill-Level SQL 75%"
+              ></progress>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">HTML/CSS</span>
+                <span class="skill__level" aria-hidden="true">Pro</span>
+              </div>
+              <progress
+                class="skill__bar"
+                value="90"
+                max="100"
+                aria-label="Skill-Level HTML/CSS 90%"
+              ></progress>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">JavaScript</span>
+                <span class="skill__level" aria-hidden="true"
+                  >Fortgeschritten</span
+                >
+              </div>
+              <progress
+                class="skill__bar"
+                value="70"
+                max="100"
+                aria-label="Skill-Level JavaScript 70%"
+              ></progress>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">Figma</span>
+                <span class="skill__level" aria-hidden="true">Mittel</span>
+              </div>
+              <progress
+                class="skill__bar"
+                value="65"
+                max="100"
+                aria-label="Skill-Level Figma 65%"
+              ></progress>
+            </div>
+            <div class="skill">
+              <div class="skill__header">
+                <span class="skill__name">Cloud</span>
+                <span class="skill__level" aria-hidden="true">Mittel</span>
+              </div>
+              <progress
+                class="skill__bar"
+                value="60"
+                max="100"
+                aria-label="Skill-Level Cloud 60%"
+              ></progress>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projekte -->
+      <section
+        id="projects"
+        class="section projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <h2 id="projects-title" class="section__title">Projekte</h2>
+
+          <div class="grid projects__grid">
+            <!-- Project Card -->
+            <article class="card project">
+              <a
+                href="{{Link Demo/Repo}}"
+                target="_blank"
+                rel="noopener"
+                class="project__media"
+              >
+                <img
+                  src="https://picsum.photos/seed/proj1/800/600"
+                  srcset="
+                    https://picsum.photos/seed/proj1/480/360   480w,
+                    https://picsum.photos/seed/proj1/800/600   800w,
+                    https://picsum.photos/seed/proj1/1200/900 1200w
+                  "
+                  sizes="(max-width:600px) 100vw, (max-width:992px) 50vw, 33vw"
+                  loading="lazy"
+                  alt="Screenshot Projekt 1"
+                />
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">{{Titel}}</h3>
+                <p class="project__desc">{{1‑Satz‑Nutzen/Ergebnis}}</p>
+                <ul class="project__tags" role="list">
+                  <li class="tag">Python</li>
+                  <li class="tag">FastAPI</li>
+                  <li class="tag">Postgres</li>
+                </ul>
+                <a
+                  href="{{Link Demo/Repo}}"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn--sm btn--primary"
+                  >Demo/Repo</a
+                >
+              </div>
+            </article>
+
+            <article class="card project">
+              <a
+                href="{{Link Demo/Repo}}"
+                target="_blank"
+                rel="noopener"
+                class="project__media"
+              >
+                <img
+                  src="https://picsum.photos/seed/proj2/800/600"
+                  srcset="
+                    https://picsum.photos/seed/proj2/480/360   480w,
+                    https://picsum.photos/seed/proj2/800/600   800w,
+                    https://picsum.photos/seed/proj2/1200/900 1200w
+                  "
+                  sizes="(max-width:600px) 100vw, (max-width:992px) 50vw, 33vw"
+                  loading="lazy"
+                  alt="Screenshot Projekt 2"
+                />
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">{{Titel}}</h3>
+                <p class="project__desc">{{1‑Satz‑Nutzen/Ergebnis}}</p>
+                <ul class="project__tags" role="list">
+                  <li class="tag">Python</li>
+                  <li class="tag">FastAPI</li>
+                  <li class="tag">Postgres</li>
+                </ul>
+                <a
+                  href="{{Link Demo/Repo}}"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn--sm btn--primary"
+                  >Demo/Repo</a
+                >
+              </div>
+            </article>
+
+            <article class="card project">
+              <a
+                href="{{Link Demo/Repo}}"
+                target="_blank"
+                rel="noopener"
+                class="project__media"
+              >
+                <img
+                  src="https://picsum.photos/seed/proj3/800/600"
+                  srcset="
+                    https://picsum.photos/seed/proj3/480/360   480w,
+                    https://picsum.photos/seed/proj3/800/600   800w,
+                    https://picsum.photos/seed/proj3/1200/900 1200w
+                  "
+                  sizes="(max-width:600px) 100vw, (max-width:992px) 50vw, 33vw"
+                  loading="lazy"
+                  alt="Screenshot Projekt 3"
+                />
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">{{Titel}}</h3>
+                <p class="project__desc">{{1‑Satz‑Nutzen/Ergebnis}}</p>
+                <ul class="project__tags" role="list">
+                  <li class="tag">Python</li>
+                  <li class="tag">FastAPI</li>
+                  <li class="tag">Postgres</li>
+                </ul>
+                <a
+                  href="{{Link Demo/Repo}}"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn--sm btn--primary"
+                  >Demo/Repo</a
+                >
+              </div>
+            </article>
+
+            <!-- Optional bis 6 Karten -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Erfahrung / Timeline -->
+      <section
+        id="experience"
+        class="section experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="container">
+          <h2 id="experience-title" class="section__title">Erfahrung</h2>
+
+          <ol class="timeline" role="list">
+            <li class="timeline__item">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__meta">2025 — {{Rolle}} — {{Ort}}</div>
+                <div class="timeline__text">
+                  Kurz‑Impact: 1 Zeile Outcome (z. B. “Prozesszeit um 20 %
+                  reduziert”).
+                </div>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__meta">
+                  2023–2024 — {{Rolle}} — {{Ort}}
+                </div>
+                <div class="timeline__text">Kurz‑Impact: 1 Zeile Outcome.</div>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__meta">
+                  2021–2023 — {{Rolle}} — {{Ort}}
+                </div>
+                <div class="timeline__text">Kurz‑Impact: 1 Zeile Outcome.</div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Testimonials (optional) -->
+      <section
+        id="testimonials"
+        class="section testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <h2 id="testimonials-title" class="section__title">
+            Worte von anderen
+          </h2>
+          <div class="grid testimonials__grid">
+            <figure class="card quote">
+              <blockquote>“{{Zitat}}”</blockquote>
+              <figcaption>— {{Name, Rolle}}</figcaption>
+            </figure>
+            <figure class="card quote">
+              <blockquote>“{{Zitat}}”</blockquote>
+              <figcaption>— {{Name, Rolle}}</figcaption>
+            </figure>
+            <figure class="card quote">
+              <blockquote>“{{Zitat}}”</blockquote>
+              <figcaption>— {{Name, Rolle}}</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontakt -->
+      <section
+        id="contact"
+        class="section contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <h2 id="contact-title" class="section__title">Kontakt</h2>
+          <p>
+            Schreib mir direkt per Formular oder via
+            <a href="mailto:{{deine_email}}" class="link">E‑Mail</a> oder
+            <a
+              href="{{LinkedIn_URL}}"
+              target="_blank"
+              rel="noopener"
+              class="link"
+              >LinkedIn</a
+            >.
+          </p>
+
+          <form
+            class="contact__form"
+            action="mailto:{{deine_email}}"
+            method="post"
+          >
+            <div class="form__row">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Dein Name"
+                required
+              />
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__row">
+              <label for="email">E‑Mail</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="dein@mail.com"
+                required
+              />
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__row">
+              <label for="message">Nachricht</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Worum geht’s?"
+                required
+                minlength="10"
+              ></textarea>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn--primary">Senden</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <p>© <span id="year"></span> {{Dein Name}} · Made with ♥</p>
+        <ul class="socials socials--footer" aria-label="Soziale Profile">
+          <li>
+            <a
+              href="{{GitHub_URL}}"
+              target="_blank"
+              rel="noopener"
+              class="socials__link"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{LinkedIn_URL}}"
+              target="_blank"
+              rel="noopener"
+              class="socials__link"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{Instagram_URL}}"
+              target="_blank"
+              rel="noopener"
+              class="socials__link"
+              >Instagram</a
+            >
+          </li>
         </ul>
-
-        <!-- Fortschritt/Level -->
-        <div class="grid skills__grid">
-          <div class="skill">
-            <div class="skill__header">
-              <span class="skill__name">Python</span>
-              <span class="skill__level" aria-hidden="true">Pro</span>
-            </div>
-            <progress class="skill__bar" value="85" max="100" aria-label="Skill-Level Python 85%"></progress>
-          </div>
-          <div class="skill">
-            <div class="skill__header">
-              <span class="skill__name">SQL</span>
-              <span class="skill__level" aria-hidden="true">Fortgeschritten</span>
-            </div>
-            <progress class="skill__bar" value="75" max="100" aria-label="Skill-Level SQL 75%"></progress>
-          </div>
-          <div class="skill">
-            <div class="skill__header">
-              <span class="skill__name">HTML/CSS</span>
-              <span class="skill__level" aria-hidden="true">Pro</span>
-            </div>
-            <progress class="skill__bar" value="90" max="100" aria-label="Skill-Level HTML/CSS 90%"></progress>
-          </div>
-          <div class="skill">
-            <div class="skill__header">
-              <span class="skill__name">JavaScript</span>
-              <span class="skill__level" aria-hidden="true">Fortgeschritten</span>
-            </div>
-            <progress class="skill__bar" value="70" max="100" aria-label="Skill-Level JavaScript 70%"></progress>
-          </div>
-          <div class="skill">
-            <div class="skill__header">
-              <span class="skill__name">Figma</span>
-              <span class="skill__level" aria-hidden="true">Mittel</span>
-            </div>
-            <progress class="skill__bar" value="65" max="100" aria-label="Skill-Level Figma 65%"></progress>
-          </div>
-          <div class="skill">
-            <div class="skill__header">
-              <span class="skill__name">Cloud</span>
-              <span class="skill__level" aria-hidden="true">Mittel</span>
-            </div>
-            <progress class="skill__bar" value="60" max="100" aria-label="Skill-Level Cloud 60%"></progress>
-          </div>
-        </div>
+        <ul class="legal">
+          <li><a href="#" class="link">Impressum</a></li>
+          <li><a href="#" class="link">Datenschutz</a></li>
+        </ul>
       </div>
-    </section>
+    </footer>
 
-    <!-- Projekte -->
-    <section id="projects" class="section projects" aria-labelledby="projects-title">
-      <div class="container">
-        <h2 id="projects-title" class="section__title">Projekte</h2>
+    <!-- Minimal Scripts: Theme Toggle, Sticky Nav Active State, Mobile Menu, Form Validation hints -->
+    <script>
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-        <div class="grid projects__grid">
-          <!-- Project Card -->
-          <article class="card project">
-            <a href="{{Link Demo/Repo}}" target="_blank" rel="noopener" class="project__media">
-              <img
-                src="https://picsum.photos/seed/proj1/800/600"
-                srcset="https://picsum.photos/seed/proj1/480/360 480w, https://picsum.photos/seed/proj1/800/600 800w, https://picsum.photos/seed/proj1/1200/900 1200w"
-                sizes="(max-width:600px) 100vw, (max-width:992px) 50vw, 33vw"
-                loading="lazy"
-                alt="Screenshot Projekt 1"
-              />
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">{{Titel}}</h3>
-              <p class="project__desc">{{1‑Satz‑Nutzen/Ergebnis}}</p>
-              <ul class="project__tags" role="list">
-  <li class="tag">Python</li>
-  <li class="tag">FastAPI</li>
-  <li class="tag">Postgres</li>
-</ul>
-              <a href="{{Link Demo/Repo}}" target="_blank" rel="noopener" class="btn btn--sm btn--primary">Demo/Repo</a>
-            </div>
-          </article>
-
-          <article class="card project">
-            <a href="{{Link Demo/Repo}}" target="_blank" rel="noopener" class="project__media">
-              <img
-                src="https://picsum.photos/seed/proj2/800/600"
-                srcset="https://picsum.photos/seed/proj2/480/360 480w, https://picsum.photos/seed/proj2/800/600 800w, https://picsum.photos/seed/proj2/1200/900 1200w"
-                sizes="(max-width:600px) 100vw, (max-width:992px) 50vw, 33vw"
-                loading="lazy"
-                alt="Screenshot Projekt 2"
-              />
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">{{Titel}}</h3>
-              <p class="project__desc">{{1‑Satz‑Nutzen/Ergebnis}}</p>
-              <ul class="project__tags" role="list">
-  <li class="tag">Python</li>
-  <li class="tag">FastAPI</li>
-  <li class="tag">Postgres</li>
-</ul>
-              <a href="{{Link Demo/Repo}}" target="_blank" rel="noopener" class="btn btn--sm btn--primary">Demo/Repo</a>
-            </div>
-          </article>
-
-          <article class="card project">
-            <a href="{{Link Demo/Repo}}" target="_blank" rel="noopener" class="project__media">
-              <img
-                src="https://picsum.photos/seed/proj3/800/600"
-                srcset="https://picsum.photos/seed/proj3/480/360 480w, https://picsum.photos/seed/proj3/800/600 800w, https://picsum.photos/seed/proj3/1200/900 1200w"
-                sizes="(max-width:600px) 100vw, (max-width:992px) 50vw, 33vw"
-                loading="lazy"
-                alt="Screenshot Projekt 3"
-              />
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">{{Titel}}</h3>
-              <p class="project__desc">{{1‑Satz‑Nutzen/Ergebnis}}</p>
-              <ul class="project__tags" role="list">
-  <li class="tag">Python</li>
-  <li class="tag">FastAPI</li>
-  <li class="tag">Postgres</li>
-</ul>
-              <a href="{{Link Demo/Repo}}" target="_blank" rel="noopener" class="btn btn--sm btn--primary">Demo/Repo</a>
-            </div>
-          </article>
-
-          <!-- Optional bis 6 Karten -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Erfahrung / Timeline -->
-    <section id="experience" class="section experience" aria-labelledby="experience-title">
-      <div class="container">
-        <h2 id="experience-title" class="section__title">Erfahrung</h2>
-
-        <ol class="timeline" role="list">
-          <li class="timeline__item">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content">
-              <div class="timeline__meta">2025 — {{Rolle}} — {{Ort}}</div>
-              <div class="timeline__text">Kurz‑Impact: 1 Zeile Outcome (z. B. “Prozesszeit um 20 % reduziert”).</div>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content">
-              <div class="timeline__meta">2023–2024 — {{Rolle}} — {{Ort}}</div>
-              <div class="timeline__text">Kurz‑Impact: 1 Zeile Outcome.</div>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content">
-              <div class="timeline__meta">2021–2023 — {{Rolle}} — {{Ort}}</div>
-              <div class="timeline__text">Kurz‑Impact: 1 Zeile Outcome.</div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Testimonials (optional) -->
-    <section id="testimonials" class="section testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <h2 id="testimonials-title" class="section__title">Worte von anderen</h2>
-        <div class="grid testimonials__grid">
-          <figure class="card quote">
-            <blockquote>“{{Zitat}}”</blockquote>
-            <figcaption>— {{Name, Rolle}}</figcaption>
-          </figure>
-          <figure class="card quote">
-            <blockquote>“{{Zitat}}”</blockquote>
-            <figcaption>— {{Name, Rolle}}</figcaption>
-          </figure>
-          <figure class="card quote">
-            <blockquote>“{{Zitat}}”</blockquote>
-            <figcaption>— {{Name, Rolle}}</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kontakt -->
-    <section id="contact" class="section contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title" class="section__title">Kontakt</h2>
-        <p>Schreib mir direkt per Formular oder via <a href="mailto:{{deine_email}}" class="link">E‑Mail</a> oder <a href="{{LinkedIn_URL}}" target="_blank" rel="noopener" class="link">LinkedIn</a>.</p>
-
-        <form class="contact__form" action="mailto:{{deine_email}}" method="post">
-          <div class="form__row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Dein Name" required />
-            <span class="form__error" aria-live="polite"></span>
-          </div>
-          <div class="form__row">
-            <label for="email">E‑Mail</label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="dein@mail.com" required />
-            <span class="form__error" aria-live="polite"></span>
-          </div>
-          <div class="form__row">
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" rows="5" placeholder="Worum geht’s?" required minlength="10"></textarea>
-            <span class="form__error" aria-live="polite"></span>
-          </div>
-          <button type="submit" class="btn btn--primary">Senden</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer__grid">
-      <p>© <span id="year"></span> {{Dein Name}} · Made with ♥</p>
-      <ul class="socials socials--footer" aria-label="Soziale Profile">
-        <li><a href="{{GitHub_URL}}" target="_blank" rel="noopener" class="socials__link">GitHub</a></li>
-        <li><a href="{{LinkedIn_URL}}" target="_blank" rel="noopener" class="socials__link">LinkedIn</a></li>
-        <li><a href="{{Instagram_URL}}" target="_blank" rel="noopener" class="socials__link">Instagram</a></li>
-      </ul>
-      <ul class="legal">
-        <li><a href="#" class="link">Impressum</a></li>
-        <li><a href="#" class="link">Datenschutz</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- Minimal Scripts: Theme Toggle, Sticky Nav Active State, Mobile Menu, Form Validation hints -->
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle: toggles .theme-dark on <html>
-    const themeBtn = document.getElementById('theme-toggle');
-    themeBtn?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('theme-dark');
-      themeBtn.setAttribute('aria-pressed', document.documentElement.classList.contains('theme-dark'));
-    });
-
-    // Mobile nav toggle
-    const navToggle = document.querySelector('.nav__toggle');
-    const navList = document.getElementById('nav-list');
-    navToggle?.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      navList.classList.toggle('is-open');
-    });
-
-    // Active link highlighting with IntersectionObserver
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('.nav__link');
-    const linkById = {};
-    navLinks.forEach(l => { linkById[l.getAttribute('href').slice(1)] = l; });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          navLinks.forEach(l => l.classList.remove('is-active'));
-          const active = linkById[id];
-          if (active) {
-            active.classList.add('is-active');
-            navLinks.forEach(l => l.removeAttribute('aria-current'));
-            active.setAttribute('aria-current', 'page');
-          }
-        }
+      // Theme toggle: toggles .theme-dark on <html>
+      const themeBtn = document.getElementById("theme-toggle");
+      themeBtn?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("theme-dark");
+        themeBtn.setAttribute(
+          "aria-pressed",
+          document.documentElement.classList.contains("theme-dark")
+        );
       });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
-    sections.forEach(sec => observer.observe(sec));
+      // Mobile nav toggle
+      const navToggle = document.querySelector(".nav__toggle");
+      const navList = document.getElementById("nav-list");
+      navToggle?.addEventListener("click", () => {
+        const expanded =
+          navToggle.getAttribute("aria-expanded") === "true" || false;
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+        navList.classList.toggle("is-open");
+      });
 
-    // Basic custom validation messages
-    document.querySelectorAll('.contact__form input, .contact__form textarea').forEach(field => {
-      field.addEventListener('invalid', () => {
-        field.parentElement.querySelector('.form__error').textContent = field.validationMessage;
+      // Active link highlighting with IntersectionObserver
+      const sections = document.querySelectorAll("main section[id]");
+      const navLinks = document.querySelectorAll(".nav__link");
+      const linkById = {};
+      navLinks.forEach((l) => {
+        linkById[l.getAttribute("href").slice(1)] = l;
       });
-      field.addEventListener('input', () => {
-        field.parentElement.querySelector('.form__error').textContent = '';
-      });
-    });
-  </script>
-</body>
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              navLinks.forEach((l) => l.classList.remove("is-active"));
+              const active = linkById[id];
+              if (active) {
+                active.classList.add("is-active");
+                navLinks.forEach((l) => l.removeAttribute("aria-current"));
+                active.setAttribute("aria-current", "page");
+              }
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+
+      sections.forEach((sec) => observer.observe(sec));
+
+      // Basic custom validation messages
+      document
+        .querySelectorAll(".contact__form input, .contact__form textarea")
+        .forEach((field) => {
+          field.addEventListener("invalid", () => {
+            field.parentElement.querySelector(".form__error").textContent =
+              field.validationMessage;
+          });
+          field.addEventListener("input", () => {
+            field.parentElement.querySelector(".form__error").textContent = "";
+          });
+        });
+    </script>
+  </body>
 </html>
